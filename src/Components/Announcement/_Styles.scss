@@ -1,0 +1,18 @@
+.Announcement{
+    background-color: $green;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0px;
+    text-align: center;
+    @include xs{
+        font-size: 13px;
+    }
+    @include sm{
+        font-size: 20px;
+    }
+    @include md{
+        font-size: 25px;
+    }
+}

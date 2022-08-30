@@ -1,0 +1,165 @@
+.oneProduct{
+    padding: 2.5rem 0px;
+    .productContent{
+        display: flex;
+        @include xs{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        @include md{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .productImg{
+            object-fit: cover;
+            flex: 1;
+            @include xs{
+                width: auto;
+            }
+            @include md{
+                width: 50%;
+            }
+        }
+        .productInfo{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            @include xs{
+                margin-left: 0px;
+            }
+            @include md{
+                margin-left: 40px;
+            }
+            h2{
+                font-weight: lighter;
+                font-size: 40px;
+            }
+            .desc{
+                margin: 20px 0px;
+                line-height: 1.4;
+                @include xs{
+                    font-size: 13px;
+                }
+                @include sm{
+                    font-size: 17px;
+                }
+            }
+            .price{
+                margin-bottom: 20px;
+                font-size: 40px;
+                font-weight: 100;
+            }
+            .productFiltering1{
+                display: flex;
+                margin-bottom: 30px;
+                @include xs{
+                    flex-direction: column;
+                }
+                @include sm{
+                    flex-direction: row;
+                }
+                .colorFiltering{
+                    margin-right: 40px;
+                    .titleColor{
+                        margin-right: 5px; 
+                    }
+                    .spanColor{
+                        border-radius: 50%;
+                        padding: 5px 12px;;
+                        margin: 0px 5px;
+                        cursor: pointer;
+                        &:active{
+                            border: 3px solid black ;
+                        }
+                    }
+                    @include xs{
+                        margin-right: 0px;
+                        margin-bottom: 20px;
+                    }
+                    @include sm{
+                        margin-right: 20px;
+                        margin-bottom: 0px;
+                    }
+                }
+                .sizefiltering{
+                    span{
+                        margin-right: 15px;
+                    }
+                    select{
+                        padding: 5px 10px;
+                        border: 1px solid gray;
+                        cursor: pointer;
+                        option{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .productFiltering2{
+                display: flex;
+                margin-right: 40px;
+                @include xs{
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+                @include sm{
+                    flex-direction: row;
+                    justify-content: baseline;
+                }
+                .chooseCount{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-right: 40px;
+                    input{
+                        width: 20px;
+                        padding: 5px;
+                        border: 1px solid gray;
+                        border-radius: 3px;
+                    }
+                    button{
+                        background-color: transparent;
+                    }
+                    @include xs{
+                        margin-right: 0px;
+                        margin-bottom: 20px;
+                    }
+                    @include sm{
+                        margin-right: 20px;
+                        margin-bottom: 0px;
+                    }
+                }
+                .add{
+                    background-color: transparent;
+                    border: 2px solid $green;
+                    padding: 20px 30px;
+                    text-transform: uppercase;
+                    transition: all 0.5s ease;
+                    &:hover{
+                        background-color: $green;
+                        color: $white;
+                    }
+                    @include xs{
+                        padding: 10px;
+                    }
+                    @include sm{
+                        padding: 20px 30px;
+                    }
+                }
+                .loading{
+                    cursor: not-allowed;
+                    background-color: gray;
+                    color: white;
+                    padding: 20px 30px;
+                    text-transform: uppercase;
+                    @include xs{
+                        padding: 10px;
+                    }
+                    @include sm{
+                        padding: 20px 30px;
+                    }
+                }
+            }
+        }
+    }
+}

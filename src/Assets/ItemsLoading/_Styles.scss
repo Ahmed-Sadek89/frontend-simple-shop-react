@@ -1,0 +1,55 @@
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    to {
+        background-position: 468px 0;
+    }
+}
+  
+.product {
+    @include xs{
+        width: 100%;
+    }
+    @include md{
+        width: 25%;
+    }
+    span {
+        display: block;
+        background: #efefef;
+        height: 25px;
+        
+        margin-top: 1rem;
+        text-align: center;
+      }
+    .image1 {
+        padding-top: 75%;
+        background: #efefef;
+    }
+    .item-1 {
+        max-width: 60%;
+        padding-left: 60px;
+        text-align: center
+    }
+    .loading {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: placeHolderShimmer;
+        animation-name: placeHolderShimmer;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        background: #f6f7f8;
+        background: linear-gradient(90deg, #eee 8%, #ddd 18%, #eee 33%);
+        background-size: 800px 104px;
+        clear: both;
+        margin-bottom: 0.75rem;
+        margin-left: 15px
+    }
+  }
+  

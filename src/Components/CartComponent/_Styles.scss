@@ -1,0 +1,208 @@
+.cart{
+    padding: 1.5rem 0px;
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        @include xs{
+            font-weight: normal;
+            font-size: 25px;
+        }
+        @include sm{
+            font-weight: 300;
+            font-size: 35px;
+        }
+    }
+    .cartBtnslinks{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        @include xs{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include sm{
+            flex-direction: row;
+            align-items: center;
+        }
+        .continue, .checkout{
+            border: 1px solid #333;
+            padding: 10px;
+            transition: all 0.5s ease;
+            text-transform: uppercase;
+        }
+        .continue{
+            background: transparent;
+            &:hover{
+                background: #333;
+                color: $white;
+            }
+        }
+        .checkout{
+            background: #333;
+            color: $white;
+            &:hover{
+                background: $white;
+                color: #333;
+            }
+        }
+        .links{
+            display: flex;
+            text-decoration: underline;
+            @include xs{
+                margin: 20px 0px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            @include sm{
+                margin: 0px 10px;
+                flex-wrap: nowrap;
+                gap: 40px;
+            }
+            span{
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .cartData{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include xs{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        @include md{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .cartItems{
+            @include xs{
+                width: auto;
+            }
+            @include md{
+                width: 75%;
+            }
+            .cartItemContent{
+                display: flex;
+                position: relative;
+                gap: 20px;margin: 20px 0px;
+                @include xs{
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    
+                }
+                @include md{
+                    flex-flow: row nowrap;
+                    align-items: center;
+                }
+                .loadingState{
+                    background: gray;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.6;
+                    cursor: wait;
+                }
+                .cartImg{
+                    width: 200px;
+                }
+                .cartInfo{
+                    line-height: 2;
+                    flex: 4;
+                    p{
+
+                    }
+                    .itemColor{
+                            border-radius: 50%;
+                            padding: 1px 11px;
+                            cursor: pointer;
+                    }
+                }
+                .cartOption{
+                    flex: 2;
+                    .chooseCount{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-right: 40px;
+                        span{
+                            font-size: 20px;
+                            margin: 0px 10px;
+                        }
+                        button{
+                            background-color: transparent;
+                        }
+                        @include xs{
+                            margin-right: 0px;
+                            margin-bottom: 20px;
+                        }
+                        @include sm{
+                            margin-right: 20px;
+                            margin-bottom: 25px;
+                        }
+                    }
+                    h3{
+                        font-weight: normal;
+                    }
+                    .update{
+                        padding: 20px 30px;
+                        margin-top: 20px;
+                        text-transform: uppercase;
+                        color: white;
+                        background: teal;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+        .cartSummary{
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            height: 100%;
+            @include xs{
+                width: auto;
+                margin: 20px 0px;
+            }
+            @include md{
+                width: 25%;
+                margin: 0px;
+                margin-left: 20px;
+            }
+            h4{
+                text-align: center;
+                font-weight: normal;
+                text-transform: uppercase;
+                @include xs{
+                    font-size: 20px;
+                }
+                @include sm{
+                    font-size: 30px;
+                }
+            }
+            .orderDetail{
+                display: flex;
+                margin: 30px 0px;
+                align-items: center;
+                @include xs{
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                @include sm{
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+            button{
+                background: #332a42;
+                color: white;
+                width: 100%;
+                padding: 25px 0px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+}

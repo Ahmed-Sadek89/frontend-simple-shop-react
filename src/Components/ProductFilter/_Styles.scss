@@ -1,0 +1,45 @@
+.productFilter{
+    padding: 1rem 0px;
+    select{
+        padding: 5px 10px;
+        border: 1px solid gray;
+        cursor: pointer;
+    }
+    span{
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-right: 10px;
+    }
+    h2{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .filterOptions{
+        display: flex;
+        @include xs{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        @include sm{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .filterDetails{
+            display: flex;
+            @include xs{
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+            @include md{
+                flex-wrap: nowrap;
+                margin-bottom: 0px;
+            }
+            .colorSelect{
+                margin-right: 10px;
+            }
+        }
+    }
+}

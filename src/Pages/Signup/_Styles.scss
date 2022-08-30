@@ -1,0 +1,101 @@
+.signup{
+    color: #333;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .signupContent{
+        @include xs{
+            width: auto;
+        }
+        @include lg{
+            width: 50%;
+        }
+        h2{
+            margin-bottom: 20px;
+            font-weight: 300;
+            @include xs{
+                font-size: 20px;
+            }
+            @include sm{
+                font-size: 30px;
+            }
+        }
+        background: white;
+        padding: 1rem;
+        padding-right: 1.5rem;
+        input{
+            padding: 15px 5px;
+            border: 1px solid #333;
+            border-radius: 3px;
+        }
+        .inputs{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            @include xs{
+                flex-direction: column;
+            }
+            @include sm{
+                flex-direction: row;
+            }
+            div{
+                flex: 1;
+                @include xs{
+                    margin-bottom: 0px;
+                }
+                @include sm{
+                    margin-bottom: 10px;
+                }
+                input{
+                    width: 100%;
+                }
+                p{
+                    color: red;
+                    font-style: italic;
+                }
+            }
+        }
+        p{
+            margin: 10px 0px;
+            @include xs{
+                font-size: 13px;
+            }
+            @include sm{
+                font-size: 14px;
+            }
+        }
+        button{
+            text-transform: uppercase;
+            color: $white;
+            @include xs{
+                padding: 15px 20px;
+            }
+            @include sm{
+                padding: 15px 60px;
+            } 
+        }
+        .signupBtn{
+            background-color: teal;
+        }
+        .loadingBtn{
+            background: gray;
+            cursor: not-allowed;
+        }
+        .errMsg{
+            color: red;
+            margin: 0px 5px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.login{
+    color: #333;
+    background: 
+        linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+        ),
+        url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+        center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loginContent{
+        @include xs{
+            width: auto;
+        }
+        @include sm{
+            width: 50%;
+        }
+        h2{
+            margin-bottom: 20px;
+            font-weight: 300;
+            @include xs{
+                font-size: 20px;
+            }
+            @include sm{
+                font-size: 30px;
+            }
+        }
+        background: white;
+        padding: 1rem;
+        padding-right: 1.5rem;
+        input{
+            padding: 15px 5px;
+            border: 1px solid #333;
+            border-radius: 3px;
+        }
+        .inputs{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            input{
+                flex: 1;
+                margin-bottom: 10px;
+            }
+            p{
+                margin: 10px 0px;
+                text-transform: capitalize;
+                text-decoration: none;
+                color: red;
+                font-style: italic;
+                font-weight: bold;
+                cursor: auto;
+            }
+        }
+        p{
+            margin: 15px 0px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            cursor: pointer;
+            @include xs{
+                font-size: 13px;
+            }
+            @include sm{
+                font-size: initial;
+            }
+    }
+        button{
+            background-color: teal;
+            text-transform: uppercase;
+            color: white;
+            @include xs{
+                padding: 15px 20px;
+            }
+            @include sm{
+                padding: 15px 60px;
+            }
+        }
+        .loadingBtn{
+            background: gray;
+            cursor: not-allowed;
+            text-transform: uppercase;
+            color: white;
+            @include xs{
+                padding: 15px 20px;
+            }
+            @include sm{
+                padding: 15px 60px;
+            }
+        }
+        .errMsg{
+            color: red;
+            margin: 0px 5px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+}

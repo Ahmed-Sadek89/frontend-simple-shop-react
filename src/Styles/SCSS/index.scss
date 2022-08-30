@@ -1,0 +1,39 @@
+@import 'basics';
+@import 'variables';
+@import 'media';
+
+// home
+@import '../../Components/Announcement/_Styles.scss';
+@import '../../Components/Navbar/_Styles.scss';
+@import '../../Components/Slider/_Styles.scss';
+@import '../../Components/Categories/_Styles.scss';
+@import '../../Components/Products/_Styles.scss';
+@import '../../Components/Newsletter/_Styles.scss';
+@import '../../Components/Footer/_Styles.scss';
+@import '../../Components/SADEK/_Styles.scss';
+
+//ProductFilter
+@import '../../Components/ProductFilter/_Styles.scss';
+@import '../../Components/ProductsInCat/_Styles.scss';
+
+
+//OneProduct
+@import '../../Components/OneProduct/_Styles.scss';
+
+//Signup
+@import '../../Pages/Signup/_Styles.scss';
+
+//Login
+@import '../../Pages/Login/_Styles.scss';
+
+//CartComponent
+@import '../../Components/CartComponent/_Styles.scss';
+
+//Payment
+@import '../../Pages/Payment/_Styles.scss';
+
+//SuccessPayment
+@import '../../Pages/SuccessPayment/_Styles.scss';
+
+//ItemsLoading
+@import '../../Assets/ItemsLoading/_Styles.scss';
